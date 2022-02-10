@@ -397,7 +397,7 @@ jobs:
             export DEBIAN_FRONTEND=noninteractive && \
             apt-get install -y libmemcached-dev libmysqlclient-dev libpq-dev unzip systemd && \
             echo "Build mysqlclient" && \
-            pip install --no-binary :all: mysqlclient && \
+            #pip install --no-binary :all: mysqlclient && \
             echo "Install RelStorage" && \
             pip install -U coverage && \
             pip install -U "faulthandler; python_version == \"2.7\" and platform_python_implementation == \"CPython\"" && \
@@ -405,7 +405,7 @@ jobs:
             unzip -n dist/RelStorage-*whl -d src && \
             echo "Initialize Test Databases" && \
             #sudo systemctl start mysql.service && \
-            #apt-get install -y mysql-server && \
+            apt-get install -y mysql-server && \
             service mysql start && \
             echo "Configuring MySQL" && \
             apt-get install -y postgresql postgresql-contrib && \
