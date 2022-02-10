@@ -405,7 +405,7 @@ jobs:
             unzip -n dist/RelStorage-*whl -d src && \
             echo "Initialize Test Databases" && \
             #sudo systemctl start mysql.service && \
-            apt-get install -y mysql-server && \
+            #apt-get install -y mysql-server && \
             service mysql start && \
             echo "Configuring MySQL" && \
             apt-get install -y postgresql postgresql-contrib && \
